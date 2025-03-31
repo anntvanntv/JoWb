@@ -70,14 +70,14 @@ nav {
       display: none;
       background: #fff0;
     }
-
+ 
     ul li:hover > ul,
     ul li ul:hover {
       display: block;
       min-width: 250px;
       text-align: left;
       padding-top: 20px;
-    }
+    } 
 
     ul li ul li {
       clear: both;
@@ -130,8 +130,9 @@ ul li ul li a {
 .text {
   display: flex;
   flex-direction: column;
-  margin: 10px 10px 10px;
-  line-height: 30px;
+  margin: 4px 10px 10px 0;
+  line-height: 20px;
+  /* font-family: "Roboto", sans-serif; */
 }
 .text p {
   font-size: 18px;
@@ -173,10 +174,70 @@ footer{
   background-color: black;
   margin-top: auto;
 }
+/*----------------------------------- COOKIES --------------------------------*/
+.cookie-consent-modal{
+  height: 100vh;
+  width: 100vw;
+  /* background-color: rgba(0,0,0,0.3); */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
+  align-items: flex-start;
+}
+.cookie-consent-modal.active{
+  display: flex;
+}
+.contentcookies{
+  background-color:#fdf8f8;
+  padding: 2vw 1vw;
+  margin-top: 28px;
+  margin-left: 15px;
+} 
+.contentcookies p{
+  font-size: 15px;
+}
+.btns{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2em;
+}
+.cookies-btn{
+  border:none;
+  outline:none;
+  padding: .8em 1,5em;
+  width: 100px;
+  margin-right: 1em;
+  border-radius: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  height: 26px;
+  font-size: 11px;
+  font-weight: 500;
+}
+.cookies-btn.cancel,
+.cookies-btn.accept{
+  background-color:black;
+  color: #fff;
+}
+.cookies-btn.cancel:hover,
+.cookies-btn.accept:hover{
+  background-color:#01030198;
+}
+.contentcookies a{
+  color:#010502;
+  font-weight: 600;
+}
+.contentcookies a:hover{
+ color: #01050236;
+}
+
 
 @media (max-width: 1258px){
   h1, .section, .perfil, .fotocv{margin-left: 8%;}
   #aparecer{text-align:left; margin-left: 8%;}
+  #menu-icon{cursor: pointer;}
 }
 
 
@@ -230,7 +291,8 @@ footer{
         visibility: visible;
         opacity: 1;
         display: block;
-      }
+      } 
+    
 
       ul li ul li {
         height: 45px;
@@ -316,5 +378,9 @@ footer{
     margin: inherit 10px !important;
   } */
 }
-
+@media (max-width: 665px){
+  .contentcookies{
+      padding: 4vw 4vw; 
+  }
+}
 
